@@ -1,5 +1,3 @@
-Here's a draft for the README file that reflects the description of your pet project:
-
 ---
 
 # Military-Shop Companion App
