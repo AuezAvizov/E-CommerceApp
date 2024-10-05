@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentBackEnd.DashboardFragment">
+
+    <!-- Верхняя панель -->
+    <ImageView
+        android:id="@+id/notificationIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/bell"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Notification Icon" />
+
+    <TextView
+        android:id="@+id/userGreetingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, User"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Панель поиска -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchCardView"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/userGreetingTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Search for products"
+            android:paddingStart="16dp"
+            android:background="@null" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Баннер со скидкой -->
+    <ImageView
+        android:id="@+id/bannerImageView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:src="@drawable/top_banner"
+        android:scaleType="centerCrop"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/searchCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Категории -->
+    <TextView
+        android:id="@+id/categoriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/bannerImageView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/categoriesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/categoriesTextView"
+        android:layout_margin="16dp">
+
+        <!-- Кнопка для первой категории -->
+        <LinearLayout
+            android:id="@+id/categoryAirsoftGuns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:tag="Airsoft Guns"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/category1Image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/bell_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Airsoft Guns"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Кнопка для второй категории -->
+        <LinearLayout
+            android:id="@+id/categoryTacticalGear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:tag="Tactical Gear"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/category2Image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/bell_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tactical Gear"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Кнопка для третьей категории -->
+        <LinearLayout
+            android:id="@+id/categoryAccessories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:tag="Accessories"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/category3Image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/bell" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accessories"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Популярные продукты -->
+    <TextView
+        android:id="@+id/popularProductsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular Products"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/categoriesLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- RecyclerView для продуктов -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/popularProductsTextView"
+        tools:listitem="@layout/item_product" />
+</androidx.constraintlayout.widget.ConstraintLayout>

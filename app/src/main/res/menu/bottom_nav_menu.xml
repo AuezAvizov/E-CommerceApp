@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/protect"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/wishlist"
+        android:icon="@mipmap/wishlist"
+        android:title="Wishlist" />
+    <item
+        android:id="@+id/orders"
+        android:icon="@mipmap/orders"
+        android:title="Orders" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@mipmap/profile"
+        android:title="Profile" />
+</menu>

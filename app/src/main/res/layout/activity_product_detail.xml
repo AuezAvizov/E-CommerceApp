@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Кнопка "Назад" -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Назад" />
+
+    <!-- Изображение товара -->
+    <ImageView
+        android:id="@+id/photoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bell" />
+
+    <!-- Название товара -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:text="Название товара" />
+
+    <!-- Цена товара -->
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:text="Цена: $120" />
+
+    <!-- Описание товара -->
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/black"
+        android:text="Описание товара" />
+
+    <!-- Дата добавления -->
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/darker_gray"
+        android:text="Дата добавления: 2024-08-13" />
+
+    <!-- Ключевые слова (функции продукта) -->
+    <TextView
+        android:id="@+id/featuresTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:text="Ключевые слова: " />
+
+    <!-- Кнопка "Купить" -->
+    <Button
+        android:id="@+id/buyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Купить"
+        android:textColor="@android:color/white"
+        android:background="@color/amber"
+        android:textAllCaps="false"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+    <!-- Кнопка "Добавить в WishList" -->
+    <Button
+        android:id="@+id/wishlistButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Добавить в WishList"
+        android:textColor="@android:color/white"
+        android:background="@color/black"
+        android:textAllCaps="false"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+</LinearLayout>

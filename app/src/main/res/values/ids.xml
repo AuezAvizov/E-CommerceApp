@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="customer_confirm_pass" type="id" />
+    <item name="customer_pass" type="id" />
+    <item name="customer_email" type="id" />
+    <item name="customer_name" type="id" />
+    <item name="customer_country" type="id" />
+    <item name="customer_city" type="id" />
+    <item name="customer_contact" type="id" />
+    <item name="registerButton" type="id" />
+    <item name="signInRegistration" type="id" />
+    <item name="signUpBtn" type="id" />
+    <item name="productImage" type="id" />
+    <item name="productPrice" type="id" />
+    <item name="productTitle" type="id" />
+    <item name="productKeywords" type="id" />
+    <item name="productUrl" type="id" />
+    <item name="idIVLogo" type="id" />
+    <item name="idRLContainer" type="id" />
+</resources>
